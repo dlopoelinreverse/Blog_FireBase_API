@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../utils/firebase.config";
 import { useDispatch } from "react-redux";
-import { addPost } from "../feature/post.slice";
+import { addPost, getPosts } from "../feature/post.slice";
 
 const CreatePost = ({ uid, displayName }) => {
   const message = useRef();
@@ -20,8 +20,13 @@ const CreatePost = ({ uid, displayName }) => {
     };
     await addDoc(collection(db, "posts"), data).then(() => {
       dispatch(addPost(data));
+      getDocs(collection(db, "posts")).then((res) =>
+        dispatch(
+          getPosts(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        )
+      );
+      message.current.value = "";
     });
-    message.current.value = "";
   };
   return (
     <div className="new-post-modal">

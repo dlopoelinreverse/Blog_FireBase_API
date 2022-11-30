@@ -14,8 +14,23 @@ export const postSlice = createSlice({
     addPost: (state, { payload }) => {
       state.posts.push(payload);
     },
+    deletePost: (state, { payload }) => {
+      state.posts = state.posts.filter((pic) => pic.id !== payload);
+    },
+    addComment: (state, { payload }) => {
+      state.posts = state.posts.map((post) => {
+        if (post.id === payload[0]) {
+          return {
+            ...post,
+            comments: payload[1],
+          };
+        } else {
+          return post;
+        }
+      });
+    },
   },
 });
 
-export const { getPosts, addPost } = postSlice.actions;
+export const { getPosts, addPost, deletePost, addComment } = postSlice.actions;
 export default postSlice.reducer;

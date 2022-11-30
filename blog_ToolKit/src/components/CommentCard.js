@@ -4,7 +4,7 @@ const CommentCard = ({ comment }) => {
   return (
     <div className="comment-post">
       <div className="comment-header">
-        <h5>Commenté {dateFormater(comment.date)}</h5>
+        {/* <h5>Commenté {dateFormater(comment.date)}</h5> */}
       </div>
       <div className="comment-content">
         <h5>{comment.commentAuthor}</h5>
