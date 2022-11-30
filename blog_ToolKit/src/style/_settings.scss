@@ -1,0 +1,47 @@
+$black1 : rgb(27, 27, 27);
+$black2 : rgb(49, 49, 49);
+$white: rgb(235, 235, 235);
+$white2:rgb(153, 153, 153);
+$color1: rgb(211, 27, 57);
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+  }
+
+  body {
+    background: $black2;
+    color: $white;
+  }
+  
+  button,
+  input[type="submit"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background: $color1;
+    transition: 0.2s;
+  
+    &:hover {
+      filter: brightness(80%);
+      transform: translateX(2px);
+    }
+  }
+  
+  input,
+  textarea {
+    border-radius: 7px;
+    border: none;
+    resize: none;
+    margin: 5px;
+    padding: 8px;
+    background: $white;
+  }
