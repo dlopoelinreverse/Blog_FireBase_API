@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { doc, updateDoc } from "firebase/firestore";
-import { auth, db } from "../utils/firebase.config";
+import { db } from "../utils/firebase.config";
 import CommentCard from "./CommentCard";
 import { useDispatch } from "react-redux";
 import { addComment } from "../feature/post.slice";

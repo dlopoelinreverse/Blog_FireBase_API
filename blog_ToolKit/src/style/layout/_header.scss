@@ -1,8 +1,8 @@
 .app-header {
-    background: $black1;
+    background: $Color3;
     width: 60%;
     min-width: 250px;
-    max-width: 600px;
+    max-width: 500px;
     min-height: 250px;
     margin: 5vh auto;
     padding: 5vh 3vw;
@@ -20,7 +20,7 @@
 
             button {
                 color: $white;
-                background: $black1;
+                background: $Color3;
                 padding: 4px 15px;
                 border-radius: 10px 10px 0 0;
 
@@ -56,7 +56,8 @@
         position: relative;
 
         span {
-            background: $color1;
+            background: $Color5;
+            color: $Color2;
             width: 30px;
             height: 30px;
             @include verticalCenter;
@@ -69,19 +70,15 @@
             text-transform: capitalize;
             font-size: 2.5rem;
             transform: translate(10px, -10px);
+            color: $Color5;
         }
 
         button {
-            // width: 30px;
-            // height: 30px;
-            // border-radius: 10px;
-            // font-size: 1.2rem;
-            // transform: translate(20px, -15px);
             position: absolute;
             right: 6px;
             top: 0;
             background: none;
-            color: $color1;
+            color: $Color5;
             font-size: 1.1rem;
         }
     }

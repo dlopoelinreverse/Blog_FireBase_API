@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// va regrouper les actions et les reducers au meme endroit
 export const postSlice = createSlice({
   name: "posts",
   initialState: {
@@ -8,7 +7,6 @@ export const postSlice = createSlice({
   },
   reducers: {
     getPosts: (state, { payload }) => {
-      // incrémenter le state, avec le payload, ce qui est transmit dans le dispatch
       state.posts = payload;
     },
     addPost: (state, { payload }) => {

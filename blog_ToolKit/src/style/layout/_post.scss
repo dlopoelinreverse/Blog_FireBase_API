@@ -3,11 +3,12 @@
     margin: 0 auto;
     min-width: 250px;
     max-width: 700px;
+    color: $Color5;
     
 
     .post {
-        background: $black1;
-        padding: 2vh 3vw;
+        background: $Color3;
+        padding: 5vh 3vw;
         margin: 1vh 0 1vh 0;
         border-radius: 0.5rem 1rem;
 
@@ -19,19 +20,24 @@
                 width: 60%;
 
                 .title {
+                    width: 150px;
                     display: flex;
-
+                    justify-content: space-between;  
+                    
                     span {
-                        background: $color1;
+                        color: $Color2;                  
+                        background: $Color5;
                         width: 30px;
                         height: 30px;
                         @include verticalCenter;
                         border-radius: 150px;
                         text-transform: uppercase;
+                        font-size: 1.5rem;
                         transform: translateY(-10px);
                     }
 
                     h2 {
+
                         text-transform: capitalize;
                         transform: translateY(-10px);
                     }
@@ -39,32 +45,80 @@
             }
             .right-part {
                 width: 50px;
-                .btn-container {
+                
                     display: flex;
                     justify-content: space-between;
-                    color: $color1;
+                    color: $Color2;
                     span {
                         cursor: pointer;
+                        color: $Color5;
                         &:hover {
+                            color: $Color1;
                             filter: brightness(80%);
                             transform: translateX(2px);
                           }
                     }
-                }
-                .btn {
-                    padding: 10px;
-                    cursor: pointer;
-                }
+                
+                
             }
         }
         p {
-            background: $white2;
+            background: $Color4;
             color: $black2;
             font-weight: 400;
             width: 100%;
-            padding: 0.5vh;
+            padding: 0.5rem;
             margin: 0 auto;
             border-radius: .5rem;            
+        }
+
+        .edit-container {
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                background: $Color3;
+            }
+            button {
+                width: 150px;
+                padding: .3rem;
+                border-radius: 7px;
+                margin: 5px;
+            }
+        }
+
+        .comment-container {
+            margin: .5rem 0;
+            padding: 1rem;
+            border-radius: 1rem;
+            background: $Color41;
+            
+            .comment-post {
+                width: 95%;
+                padding: .5rem;
+                margin: .5rem 0;
+                border-radius: 10px;
+                background: $Color4;
+
+                .comment-content {
+                    
+                    p{
+                        background: $Color3;
+                    }
+                }
+            }
+
+            form {
+                width: 95%;
+                display: flex;
+                justify-content: space-around;
+                
+                textarea {
+                    width: 70%;
+                }
+            }
+            
+
         }
     }
 }

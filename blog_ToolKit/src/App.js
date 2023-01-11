@@ -50,7 +50,7 @@ const App = () => {
       </div>
       <div className="post-container">
         {posts &&
-          [...posts] // soucis avec la data issue du useSelector, on test de savoir si elle existe, puis on refait un nouveau
+          [...posts]
             .sort((a, b) => b.date - a.date)
             .map((post) => <Post post={post} key={post.id} user={user} />)}
       </div>

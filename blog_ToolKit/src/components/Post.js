@@ -37,7 +37,7 @@ const Post = ({ post, user }) => {
       </div>
 
       {edit ? (
-        <>
+        <div className="edit-container">
           <textarea
             autoFocus
             defaultValue={editMessage ? editMessage : post.message}
@@ -46,7 +46,7 @@ const Post = ({ post, user }) => {
           <button className="edit-button" onClick={() => handleEditMessage()}>
             Editer le message
           </button>
-        </>
+        </div>
       ) : (
         <p>{editMessage ? editMessage : post.message}</p>
       )}
