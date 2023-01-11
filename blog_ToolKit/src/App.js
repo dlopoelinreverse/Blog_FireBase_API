@@ -12,9 +12,8 @@ import { getPosts } from "./feature/post.slice";
 const App = () => {
   const [user, setUser] = useState(null);
 
-  // const [posts, setPosts] = useState([]);
-  const dispatch = useDispatch(); // anciennement setPosts
-  const posts = useSelector((state) => state.posts.posts); // posts
+  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.posts.posts);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
